@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class SearchIn2DArray{
 	public static void main(String[] args){
@@ -6,37 +7,32 @@ public class SearchIn2DArray{
 		int row = read.nextInt();
 		int col = read.nextInt();
 		int[][] array = new int[row][col];
-		input(array,row,col);
+		input(array);
+		System.out.println(Arrays.deepToString(array));
 		int target = read.nextInt();
-		display(array,row,col);
-		linear_search(array,target,row,col);
+		linear_search(array,target);
 	}
 
-	static void input(int[][] array,int row,int col){
+	static void input(int[][] array){
 		Scanner read = new Scanner(System.in);
-		for(int i=0;i<row;i++){
-			for(int j=0;j<col;j++){
-				array[i][j] = read.nextInt();
+		for(int row = 0;row<array.length;row++){
+			for(int col = 0;col<array[row].length;col++){
+				array[row][col] = read.nextInt();
 			}
 		}
 	}
 
-	static void display(int[][] array,int row,int col){
-		for(int i=0;i<row;i++){
-			for(int j=0;j<col;j++){
-				System.out.print(array[i][j]+" ");
-			}System.out.println();
-		}
-	}
-
-	static void linear_search(int[][] array,int target,int row,int col){
-		for(int i=0;i<row;i++){
-			for(int j=0;j<col;j++){
-				if(target == array[i][j]){
-					System.out.println(i+" "+j);
+	static void linear_search(int[][] array,int target){
+		int[] position = {-1,-1};
+		for(int row = 0;row<array.length;row++){
+			for(int col = 0;col<array[row].length;col++){
+				if(target == array[row][col]){
+					position[0] = row;
+					position[1] = col;
 				}
 			}
 		}
+		System.out.println(Arrays.toString(position));
 	}
 }
 
