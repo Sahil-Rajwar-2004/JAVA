@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class SearchInMatrix{
+public class BinarySearchMatrix{
 	public static void main(String[] args){
 		Scanner read = new Scanner(System.in);
 		int row = read.nextInt();
