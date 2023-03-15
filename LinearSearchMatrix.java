@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class SearchIn2DArray{
+public class LinearSearchMatrix{
 	public static void main(String[] args){
 		Scanner read = new Scanner(System.in);
 		int row = read.nextInt();
