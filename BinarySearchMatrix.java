@@ -8,6 +8,7 @@ public class BinarySearchMatrix{
 		int col = read.nextInt();
 		int[][] array = new int[row][col];
 		input(array);
+		System.out.println(Arrays.deepToString(array));
 		int target = read.nextInt();
 		System.out.println(Arrays.toString(binary_search(array,target)));
 	}
