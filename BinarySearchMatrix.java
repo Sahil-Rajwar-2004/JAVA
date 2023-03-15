@@ -9,7 +9,7 @@ public class SearchInMatrix{
 		int[][] array = new int[row][col];
 		input(array);
 		int target = read.nextInt();
-		System.out.println(Arrays.toString(search(array,target)));
+		System.out.println(Arrays.toString(binary_search(array,target)));
 	}
 
 	static void input(int[][] array){
@@ -21,7 +21,7 @@ public class SearchInMatrix{
 		}
 	}
 
-	static int[] search(int[][] matrix,int target){
+	static int[] binary_search(int[][] matrix,int target){
 		int row = 0;
 		int col = matrix[row].length - 1;
 		while(row<matrix.length && col >= 0){
